@@ -1,0 +1,126 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #98b4e7, #a1deeb);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  /*dark theme*/
+}
+.calculator #display {
+  color: #0a1e23;
+  margin: 0 10px;
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 745;
+}
+.calculator #equal {
+  height: 130px;
+}
+.calculator button#clear {
+  background-color: #ffd1ea;
+  color: #f32195;
+}
+.calculator .btn-number {
+  background-color: #c3eaff;
+  color: #000000;
+}
+.calculator .btn-operator {
+  background-color: #fad1ff;
+  color: #800077;
+}
+.calculator .btn-equal {
+  background-color: #ddffb0;
+  color: #48b300;
+}
+.calculator.dark {
+  background-color: #262525;
+}
+.calculator.dark #display {
+  color: #fff;
+}
+.calculator.dark #clear {
+  background-color: #aa3575;
+  color: white;
+}
+.calculator.dark .btn-number {
+  background-color: #1f7fa4;
+  color: #fff;
+}
+.calculator.dark .btn-operator {
+  background-color: #5f004f;
+  color: #fff;
+}
+.calculator.dark .btn-equal {
+  background-color: #136502;
+  color: #fff;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+.theme-toggler:before {
+  content: "🌙";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #333;
+  z-index: -1;
+}
+
+.theme-toggler.active {
+  color: #333;
+}
+.theme-toggler.active::before {
+  content: "☀️";
+  background-color: #fff;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
